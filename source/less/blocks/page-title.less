@@ -1,0 +1,42 @@
+.page-title {
+  margin: 0 auto;
+  padding: 30px 0;
+  color: #000000;
+  text-transform: uppercase;
+
+  a {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 58px 64px 40px 64px;
+
+    a {
+      align-self: center;
+      display: block;
+      width: 160px;
+      margin-top: -5px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    padding: 60px 0 80px 0;
+  }
+}
+
+.page-title__title {
+  margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: left;
+  }
+}

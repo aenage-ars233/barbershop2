@@ -25,12 +25,29 @@
       background-image: url("../img/bg-header@2x.jpg");
       background-size: 1338px auto;
     }
+
+    &--inner {
+      height: 218px;
+      background-image: url("../img/advantages-angle-tablet.svg"), url("../img/bg-header.jpg");
+      background-repeat: no-repeat, no-repeat;
+      background-position: center bottom, 50% -9px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/advantages-angle-tablet.svg"), url("../img/bg-header@2x.jpg");
+        background-size: 100% auto, 1338px auto;
+        background-position: center bottom, 50% -9px;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
-    height: 648px;
-    background-position: 50% 0;
-    background-size: cover;
+    height: 673px;
+    background-position: center bottom, 50% 0;
+    background-size: 100% auto, cover;
+
+    &--inner {
+      height: 307px;
+    }
   }
 }
 

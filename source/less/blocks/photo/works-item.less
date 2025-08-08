@@ -1,0 +1,197 @@
+.works-item {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: stretch;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    height: 100%;
+
+    &--work-of-month {
+      flex-direction: row;
+    }
+  }
+}
+
+.works-item--work-of-month {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+  }
+}
+
+.works-item--work-of-month::before {
+  content: "Работа месяца";
+  position: absolute;
+  top: 401px;
+  left: 0;
+  width: 176px;
+  padding: 13px 10px 13px 10px;
+  text-align: center;
+  background-color: #826550;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    top: 35px;
+    left: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 26px;
+    right: 0;
+    left: auto;
+  }
+}
+
+.works-item__image-wrapper {
+  width: 280px;
+  height: 176px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 270px;
+    height: 294px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 294px;
+    height: 294px;
+  }
+}
+
+.works-item--work-of-month .works-item__image-wrapper {
+  height: 480px;
+
+  @media (min-width: @tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+.works-item__review {
+  padding: 17px 10px 20px 0;
+  border: 1px solid #e5ddd5;
+  border-top: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 370px;
+    padding: 50px 55px 41px 50px;
+    border: 1px solid #e5ddd5;
+    border-left: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 294px;
+    flex-grow: 1;
+    padding: 34px 30px 35px 36px;
+    border: 1px solid #e5ddd5;
+    border-top: none;
+  }
+}
+
+.works-item--work-of-month .works-item__review {
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+    padding: 134px 100px 31px 42px;
+    border: 1px solid #e5ddd5;
+    border-left: none;
+  }
+}
+
+.works-item__title {
+  margin: 0;
+  margin-bottom: 16px;
+  margin-left: 23px;
+  color: #000000;
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
+}
+
+.works-item__text {
+  margin: 0;
+  margin-left: 23px;
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 36px;
+  }
+}
+
+.works-item__parameter-list {
+  .list-reset();
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  margin-left: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+    margin-left: 0;
+  }
+}
+
+.works-item__parameter-item {
+  margin-right: 31px;
+}
+
+.works-item__parameter-item:first-child {
+  margin-left: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
+}
+
+.works-item__parameter-item--haircut {
+  padding-left: 35px;
+  margin-right: 36px;
+  background-image: url("../img/photos/scissors-icon.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.works-item__parameter-item--shaving {
+  padding-left: 42px;
+  background-image: url("../img/photos/beard-icon.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.works-item__parameter-item--mustache {
+  padding-left: 58px;
+  background-image: url("../img/photos/mustache-icon.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.works-item__parameter-item:last-child {
+  margin-right: 0;
+}
