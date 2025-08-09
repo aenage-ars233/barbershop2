@@ -2,11 +2,31 @@
   margin-bottom: 39px;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 87px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 
 .form__form {
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+  }
 }
 
 .form__group {
@@ -15,10 +35,46 @@
   border: none;
 }
 
+.form__group--legend {
+  @media (min-width: @tablet-width) {
+    border-top: 1px solid #e5ddd5;
+  }
+}
+
+.form__group-title {
+  display: block;
+  width: 100%;
+  margin-bottom: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 27px;
+
+  @media (min-width: @tablet-width) {
+    width: 380px;
+    margin: 0 auto;
+    margin-bottom: 37px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 44px;
+  }
+}
+
 /*Data*/
 
 .form__group--data {
   margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .form__group--data input {
@@ -41,16 +97,11 @@
   &:focus {
     outline: 4px solid fade(#007dfa, 60%);
   }
-}
 
-.form__group-title {
-  display: block;
-  width: 100%;
-  margin-bottom: 36px;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 20px;
-  line-height: 27px;
+  @media (min-width: @tablet-width) {
+    padding: 20px 25px;
+    font-size: 24px;
+  }
 }
 
 .form__contacts-name {
@@ -59,10 +110,22 @@
   gap: 6px;
   margin: 0;
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    gap: 0;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 37px;
+  }
 }
 
 .form__contacts-name input {
-
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+  }
 }
 
 .form__contacts-data {
@@ -71,10 +134,15 @@
   gap: 6px;
   margin: 0;
   margin-bottom: 32px;
-}
 
-.form__contacts-data input {
+  @media (min-width: @tablet-width) {
+    gap: 35px;
+    margin-bottom: 35px;
+  }
 
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
 }
 
 .form__other-info {
@@ -98,12 +166,26 @@
   &:focus {
     outline: 4px solid fade(#007dfa, 60%);
   }
+
+  @media (min-width: @tablet-width) {
+    height: 211px;
+    padding: 20px 25px;
+    font-size: 24px;
+  }
 }
 
 /*Beard*/
 
 .form__group--beard {
   margin-bottom: 43px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 62px;
+  }
 }
 
 .form__beards-list {
@@ -111,10 +193,22 @@
   display: flex;
   flex-wrap: wrap;
   gap: 31px 42px;
+
+  @media (min-width: @tablet-width) {
+    gap: 31px 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 31px 127px;
+  }
 }
 
 .form__beard-item {
   width: 65px;
+
+  @media (min-width: @tablet-width) {
+    width: 90px;
+  }
 }
 
 .form__beard {
@@ -132,6 +226,10 @@
   margin-bottom: 10px;
   border-radius: 50%;
   background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+  }
 }
 
 .form__beard:hover > .form__beard-radio-mark {
@@ -161,6 +259,12 @@
   display: block;
   margin-bottom: 10px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 29px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .form__beard-icon {
@@ -172,6 +276,22 @@
 
 .form__group--services {
   margin-bottom: 47px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.form__group--services legend {
+  @media (min-width: @desktop-width) {
+    &::after {
+      content: ":";
+    }
+  }
 }
 
 .form__services-list {
@@ -179,11 +299,29 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 47px 0;
+  }
+}
+
+.form__services-item {
+  @media (min-width: @tablet-width) {
+    width: 320px;
+  }
 }
 
 .form__services-label {
   display: flex;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 20px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .form__services-checkbox-mark {
@@ -193,6 +331,10 @@
   margin-right: 25px;
   border: 1px solid #e5ddd5;
   background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 24px;
+  }
 }
 
 .form__services-label:hover > .form__services-checkbox-mark {
@@ -242,5 +384,10 @@
     background-color: #aeaeae;
     color: #ffffff;
     cursor: default;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 20px 20px 20px 19px;
+    font-size: 24px;
   }
 }
